@@ -81,8 +81,8 @@ header nav form.search {
 header nav form input {
     background-image: url("../img/search-16x16.png");
     background-repeat: no-repeat;
-    background-position: 3px center;
-    padding-left: 22px;
+    background-position: 0.2rem center;
+    padding-left: 1.6rem;
 }
 
 .middle {
@@ -102,7 +102,6 @@ main {
 main .datatable {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    border-collapse: collapse;
     border: 1px solid var(--table-color);
 }
 
@@ -160,8 +159,8 @@ main article ul.attachment li {
     background-image: url("../img/paperclip-16x16.png");
     background-position: 0 center;
     background-repeat: no-repeat;
-    padding-left: 19px;
-    line-height: 16px;
+    padding-left: 1.35rem;
+    line-height: 1.1rem;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
