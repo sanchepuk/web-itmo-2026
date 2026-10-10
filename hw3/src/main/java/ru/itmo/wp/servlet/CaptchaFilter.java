@@ -29,7 +29,7 @@ public class CaptchaFilter extends HttpFilter {
             String result = session.getAttribute("result") == null ? null : session.getAttribute("result").toString();
             String userResult = session.getAttribute("userResult") == null ? null : session.getAttribute("userResult").toString();
             if (result == null || !result.equals(userResult)){
-                if (request.getParameter("userResult") != null){
+                if (request.getRequestURI().endsWith("/captcha") && request.getParameter("userResult") != null){
                     userResult = request.getParameter("userResult").strip();
                     session.setAttribute("userResult", userResult);
                     if (userResult.equals(result)){
