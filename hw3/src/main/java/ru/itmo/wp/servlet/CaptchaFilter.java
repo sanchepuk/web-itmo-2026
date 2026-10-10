@@ -22,7 +22,9 @@ public class CaptchaFilter extends HttpFilter {
 
     @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-        if (request.getRequestURI().endsWith(".html") || request.getRequestURI().endsWith("/captcha")){
+        if (!request.getRequestURI().endsWith(".css") &&
+                !request.getRequestURI().endsWith(".png")&&
+                !request.getRequestURI().endsWith(".js")){
             HttpSession session = request.getSession();
             String result = session.getAttribute("result") == null ? null : session.getAttribute("result").toString();
             String userResult = session.getAttribute("userResult") == null ? null : session.getAttribute("userResult").toString();
